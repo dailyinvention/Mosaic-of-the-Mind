@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Remove cell from hidden cells class
       element.classList.remove('hidden-cell')
       element.classList.add('visible-cell')
-      element.style.animation = 'fadeIn .5s ease-in 1 forwards'
+      element.style.animation = 'fadeIn .4s ease-in 1 forwards'
       randomFadeIn()
     }, fadeDuration)
 
@@ -72,6 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   randomFadeIn()
-  
+
 }, false)
 
