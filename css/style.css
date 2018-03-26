@@ -1,0 +1,13 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden-cell {
+  opacity: 0;
+}
+
+.visible-cell {
+  opacity: 0;
+}
