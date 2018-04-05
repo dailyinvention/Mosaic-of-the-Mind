@@ -10,6 +10,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const heightDivisor = document.getElementById('y-divisor').getAttribute('param')
   const widthDivisor = document.getElementById('x-divisor').getAttribute('param')
 
+  // Mixes colors together 
+  const combineColor = (color1, color2, weight) => {
+    const decimalToHex = (dec) => { return dec.toString(16) }
+    const hexToDecimal = (hex) => { return parseInt(hex, 16) }
+    const color = "#"
+  
+    for(let i = 0; i <= 5; i += 2) {
+      let v1 = hexToDecimal(color_1.substr(i, 2))
+      let v2 = hexToDecimal(color_2.substr(i, 2))
+      let val = decimalToHex(Math.floor(v2 + (v1 - v2) * (.5))) 
+  
+      while(val.length < 2) { val = '0' + val }
+      
+      finalColor += val
+    }   
+    return finalColor
+  }
+  
   // Function fades in random cells
   let randomFadeIn = () => {
     const fadeDuration = document.getElementById('fade-delay').getAttribute('param')
